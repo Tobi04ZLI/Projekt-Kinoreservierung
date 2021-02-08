@@ -7,7 +7,7 @@
     <body>
     hello
     <?php
-    phpinfo();
+    
     ?>
     </body>
 </html>
