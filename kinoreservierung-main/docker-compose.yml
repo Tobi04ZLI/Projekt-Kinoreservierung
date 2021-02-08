@@ -1,0 +1,59 @@
+version: "3.1"
+
+services:
+
+    application:
+      image: debian:jessie
+      container_name: application
+      entrypoint: /bin/bash
+      stdin_open: true # docker run -i
+      tty: true        # docker run -t
+      volumes:
+        - ./application/html:/var/www/html
+        - ./application/data:/var/lib/mysql
+
+    mariadatabase:
+      image: mariadb:10.4
+      container_name: mariadatabase
+      restart: always
+      depends_on:
+        - application
+      environment:
+        - MYSQL_ROOT_PASSWORD=kino
+        - MYSQL_DATABASE=kinoreser
+        - MYSQL_USER=kino
+        - MYSQL_PASSWORD=kino
+      ports:
+        - "8086:3306"
+      volumes_from:
+        - application
+
+    webserver:
+      build: ./nginx/
+      container_name: webserver-kino
+      ports:
+        - "80:80"
+      depends_on:
+        - application
+        - php
+      volumes_from:
+        - application
+
+    php:
+      build: ./php/
+      expose:
+          - 9000
+      container_name: php-kino
+      volumes_from:
+        - application
+
+    adminer:
+      image: adminer
+      container_name: adminer-kino
+      restart: always
+      ports:
+        - 8080:8080
+      depends_on:
+        - mariadatabase
+        - php
+        - application
