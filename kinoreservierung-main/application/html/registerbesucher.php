@@ -32,7 +32,7 @@ class register{
             }
             
             $connection->close();
-            header("Location: registerbesucher.php");
+            header("Location: index.php");
         }
     }
 }
