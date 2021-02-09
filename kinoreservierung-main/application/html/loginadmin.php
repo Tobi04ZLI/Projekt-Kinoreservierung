@@ -1,5 +1,6 @@
 <?php
 require_once ("database.php");
+require_once ("adminview.php");
 
 class Login
 {
@@ -20,13 +21,13 @@ class Login
             $adminFromDatabase = $result->fetch_all(MYSQLI_ASSOC);
             foreach ($adminFromDatabase as $admin) {
                 ($admin);
-                $adminname = $admin['adminname'];
-                if (mysqli_num_rows($result)) {
-                    $_SESSION["Admin"]=true;
-                    header("location: room.class.php");
+                $adminnamen = $admin['adminname'];
+                $adminpasswort = $admin['adminpassword'];
+                if ($adminname == $adminnamennamen && $adminpassword == $adminpasswort) {
+                    header("Location: adminview.php");
                 } else {
-                    header("location: index.php");
-                    /*die(mysqli_error($connection) . "this user not exists");*/
+                    echo "Wrong Logindata";
+                    header("Location: index.php");
                 }
             }
         }
