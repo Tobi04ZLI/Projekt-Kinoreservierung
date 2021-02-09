@@ -20,7 +20,7 @@ require_once 'data.php';
         <form action="index.php" method="POST">
                 <input type="text" name="adminname" placeholder="username"> <br> <br>
                 <input type="password" name="adminpassword" placeholder="passwort"> <br> <br>
-                <button type="submit" name="button">login</button>
+                <button type="submit" name="submit">login</button>
         </form>
 
     </body>
