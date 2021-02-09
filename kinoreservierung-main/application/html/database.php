@@ -1,8 +1,8 @@
 <?php
-$servername = "mariadb";
+$servername = "mariadatabase";
 $user = "root";
-$password = "happyplace";
-$dbname = "happyplace";
+$password = "kino";
+$dbname = "kinoreser";
 
 $connection = new mysqli($servername, $user, $password, $dbname);
 
