@@ -18,8 +18,8 @@ require_once 'data.php';
         </form>
 
         <form action="index.php" method="POST">
-                <input type="text" name="username" placeholder="username"> <br> <br>
-                <input type="password" name="password" placeholder="passwort"> <br> <br>
+                <input type="text" name="adminname" placeholder="username"> <br> <br>
+                <input type="password" name="adminpassword" placeholder="passwort"> <br> <br>
                 <button type="submit" name="button">login</button>
         </form>
 
