@@ -1,22 +1,24 @@
 <?php
+
 require_once "database.php";
+
 class register{
 
     public $username;
-    public $pwd;
+    public $email;
 
-    public function __constructor($username, $pwd){
+    public function __constructor($username, $email){
 
         $this->username = $username;
-        $this->pwd = $pwd;
+        $this->email = $email;
     }
 
     public function create($connection){
         if(isset($_POST["button"])){
             $username = $_POST['username'];
-            $pwd = $_POST['pwd'];
+            $email = $_POST['email'];
 
-            $query = "INSERT INTO users (username, password) VALUES ('$username', '$pwd');";
+            $query = "INSERT INTO users (username, email) VALUES ('$username', '$email');";
             $result = $connection->query($query);
 
             if (!$result) {
