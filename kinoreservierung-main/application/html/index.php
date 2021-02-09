@@ -6,9 +6,7 @@
         <title>Homepage</title>
     </head>
     <body>
-    <?php
-
-    ?>
+    
     Hello
     </body>
 </html>
