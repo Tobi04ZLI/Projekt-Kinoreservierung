@@ -1,3 +1,7 @@
+<?php
+require_once 'data.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,7 +11,7 @@
     </head>
     <body>
 
-    <form action="registerbesucher.php" method="POST">
+    <form action="index.php" method="POST">
         <div class="input">
             <input type="text" name="username" placeholder="username"> <br> <br>
             <input type="text" name="email" placeholder="email"> <br> <br>
