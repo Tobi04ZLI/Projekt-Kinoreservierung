@@ -3,17 +3,20 @@ require_once ("database.php");
 
 class reserved{
 
+    public $username;
 
-    public function reserv($connection, $usrname){
+    public function reserv($connection, $username){
 
         $sql = "SELECT username FROM users";
         $result = $connection->query($sql);
-        $usersFromDatabase = $result->fetch_all(MYSQLI_ASSOC);
-        foreach ($usersFromDatabase as $users) {
-            ($users);
-            $username = $users['username'];
+        $usrsFromDatabase = $result->fetch_all(MYSQLI_ASSOC);
+        foreach ($usrsFromDatabase as $usrs) {
+            ($usrs);
+            $usrname = $usrs['username'];
             if($username == $usrname){
-
+                echo "go die";
+            } else {
+                echo "fuck";
             }
         }
     }
