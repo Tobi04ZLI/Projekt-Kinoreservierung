@@ -7,7 +7,7 @@
     </head>
     <body>
     <?php
-    require_once ("database.php");
+
     ?>
     Hello
     </body>
