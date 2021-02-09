@@ -16,5 +16,12 @@ require_once 'data.php';
                 <input type="text" name="email" placeholder="email"> <br> <br>
                 <button type="submit" name="button">register</button>
         </form>
+
+        <form action="index.php" method="POST">
+                <input type="text" name="username" placeholder="username"> <br> <br>
+                <input type="password" name="password" placeholder="passwort"> <br> <br>
+                <button type="submit" name="button">login</button>
+        </form>
+
     </body>
 </html>
