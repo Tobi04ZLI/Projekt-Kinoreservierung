@@ -16,21 +16,33 @@ class register{
             $username = $_POST['username'];
             $email = $_POST['email'];
 
-            $query = "INSERT INTO users (username, email) VALUES ('$username', '$email');";
-            $result = $connection->query($query);
+            $sql = "SELECT * FROM users";
+            $result = $connection->query($sql);
+            $usrsFromDatabase = $result->fetch_all(MYSQLI_ASSOC);
+            foreach ($usrsFromDatabase as $usrs) {
+                ($usrs);
+                $usrname = $usrs['username'];
+                $mail = $usrs['email'];
+                if($username == $usrname && $email == $mail){
+                    echo "Please Login, dies Account already exists";
+                } else {
+                    $query = "INSERT INTO users (username, email) VALUES ('$username', '$email');";
+                    $result = $connection->query($query);
 
-            if (!$result) {
-                die($connection->error);
+                    if (!$result) {
+                        die($connection->error);
+                    }
+                    
+                    if ($connection->query($sql) === TRUE) {
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . $connection->error;
+                    }
+                    
+                    $connection->close();
+                    header("Location: index.php");
+                }
             }
-            
-            if ($connection->query($sql) === TRUE) {
-                echo "New record created successfully";
-            } else {
-                echo "Error: " . $sql . "<br>" . $connection->error;
-            }
-            
-            $connection->close();
-            header("Location: index.php");
         }
     }
 }
