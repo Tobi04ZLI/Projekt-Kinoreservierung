@@ -12,13 +12,9 @@ require_once 'data.php';
     <body>
 
     <form action="index.php" method="POST">
-        <div class="input">
             <input type="text" name="username" placeholder="username"> <br> <br>
             <input type="text" name="email" placeholder="email"> <br> <br>
-            <button type="submit" name="submit">
-                register
-            </button>
-        </div>
+            <button type="submit" name="submit">register</button>
     </form>
 
     </body>
