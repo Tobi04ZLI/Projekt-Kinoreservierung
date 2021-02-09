@@ -29,7 +29,6 @@ class Login
                     /*die(mysqli_error($connection) . "this user not exists");*/
                 }
             }
-            $result = mysqli_query($connection, $sqltwo);
         }
     }
 }
