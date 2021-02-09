@@ -6,7 +6,16 @@
         <title>Homepage</title>
     </head>
     <body>
-    
-    Hello
+
+    <form action="registerbesucher.php" method="POST">
+        <div class="input">
+            <input type="text" name="username" placeholder="username"> <br> <br>
+            <input type="text" name="email" placeholder="email"> <br> <br>
+            <button type="submit" name="submit">
+                register
+            </button>
+        </div>
+    </form>
+
     </body>
 </html>
