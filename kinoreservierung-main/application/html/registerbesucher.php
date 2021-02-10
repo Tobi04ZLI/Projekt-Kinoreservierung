@@ -19,6 +19,9 @@ class register{
             $sql = "SELECT * FROM users";
             $result = $connection->query($sql);
             $usrsFromDatabase = $result->fetch_all(MYSQLI_ASSOC);
+            
+            if ($username != "" && $email != "") {
+
             foreach ($usrsFromDatabase as $usrs) {
                 ($usrs);
                 $usrname = $usrs['username'];
@@ -41,10 +44,9 @@ class register{
                     
                     $connection->close();
                     header("Location: registerview.php");
+                    }
                 }
             }
         }
     }
 }
-
-?>
