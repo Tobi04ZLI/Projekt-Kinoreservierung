@@ -6,6 +6,7 @@ require_once 'data.php';
 <head>
     <meta charset="utf-8">
     <link rel="icon" type="image/png" sizes="32x32" href="./icons/video-camera.png">
+    <link rel="stylesheet" href="./CSS/index.css">
     <title>Homepage</title>
 </head>
 
