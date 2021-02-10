@@ -40,7 +40,7 @@ class register{
                     }
                     
                     $connection->close();
-                    header("Location: index.php");
+                    header("Location: registerview.php");
                 }
             }
         }

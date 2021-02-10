@@ -11,17 +11,7 @@ require_once 'data.php';
     </head>
     <body>
 
-        <form action="index.php" method="POST">
-                <input type="text" name="username" placeholder="username"> <br> <br>
-                <input type="text" name="email" placeholder="email"> <br> <br>
-                <button type="submit" name="button">register</button>
-        </form>
-
-        <form action="index.php" method="POST">
-                <input type="text" name="adminname" placeholder="username"> <br> <br>
-                <input type="password" name="adminpassword" placeholder="passwort"> <br> <br>
-                <button type="submit" name="submit">login</button>
-        </form>
+    <button class="login" onclick="location.href='adminloginview.php'">log in as admin</button>
 
     </body>
-</html>
+    </html>
