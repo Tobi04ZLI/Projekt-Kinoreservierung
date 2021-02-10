@@ -3,192 +3,216 @@
 -- Model: New Model    Version: 1.0
 -- MySQL Workbench Forward Engineering
 
-use kinoreser;
-
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema kinoreser
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema kinoreser
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `kinoreser` DEFAULT CHARACTER SET utf8 ;
+USE `kinoreser` ;
+
 
 -- -----------------------------------------------------
--- Table `mydb`.`movieone`
+-- Table `kinoreser`.`seat`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`movieone` (
-  `movieoneid` INT NOT NULL,
-  `rowoneseatone` VARCHAR(45) NULL,
-  `rowoneseattwo` VARCHAR(45) NULL,
-  `rowoneseatthree` VARCHAR(45) NULL,
-  `rowoneseatfour` VARCHAR(45) NULL,
-  `rowoneseatfive` VARCHAR(45) NULL,
-  `rowoneseatsix` VARCHAR(45) NULL,
-  `rowoneseatseven` VARCHAR(45) NULL,
-  `rowoneseateight` VARCHAR(45) NULL,
-  `rowoneseatnine` VARCHAR(45) NULL,
-  `rowoneseatten` VARCHAR(45) NULL,
-  `rowtwoseatone` VARCHAR(45) NULL,
-  `rowtwoseattwo` VARCHAR(45) NULL,
-  `rowtwoseatthree` VARCHAR(45) NULL,
-  `rowtwoseatfour` VARCHAR(45) NULL,
-  `rowtwoseatfive` VARCHAR(45) NULL,
-  `rowtwoseatsix` VARCHAR(45) NULL,
-  `rowtwoseatseven` VARCHAR(45) NULL,
-  `rowtwoseateight` VARCHAR(45) NULL,
-  `rowtwoseatnine` VARCHAR(45) NULL,
-  `rowtwoseatten` VARCHAR(45) NULL,
-  `rowthreeseatone` VARCHAR(45) NULL,
-  `rowthreeseattwo` VARCHAR(45) NULL,
-  `rowthreeseatthree` VARCHAR(45) NULL,
-  `rowthreeseatfour` VARCHAR(45) NULL,
-  `rowthreeseatfive` VARCHAR(45) NULL,
-  `rowthreeseatsix` VARCHAR(45) NULL,
-  `rowthreeseatseven` VARCHAR(45) NULL,
-  `rowthreeseateight` VARCHAR(45) NULL,
-  `rowthreeseatnine` VARCHAR(45) NULL,
-  `rowthreeseatten` VARCHAR(45) NULL,
-  `rowfourseatone` VARCHAR(45) NULL,
-  `rowfourseattwo` VARCHAR(45) NULL,
-  `rowfourseatthree` VARCHAR(45) NULL,
-  `rowfourseatfour` VARCHAR(45) NULL,
-  `rowfourseatfive` VARCHAR(45) NULL,
-  `rowfourseatsix` VARCHAR(45) NULL,
-  `rowfourseatseven` VARCHAR(45) NULL,
-  `rowfourseateight` VARCHAR(45) NULL,
-  `rowfourseatnine` VARCHAR(45) NULL,
-  `rowfourseatten` VARCHAR(45) NULL,
-  `rowfiveseatone` VARCHAR(45) NULL,
-  `rowfiveseattwo` VARCHAR(45) NULL,
-  `rowfiveseatthree` VARCHAR(45) NULL,
-  `rowfiveseatfour` VARCHAR(45) NULL,
-  `rowfiveseatfive` VARCHAR(45) NULL,
-  `rowfiveseatsix` VARCHAR(45) NULL,
-  `rowfiveseatseven` VARCHAR(45) NULL,
-  `rowfiveseateight` VARCHAR(45) NULL,
-  `rowfiveseatnine` VARCHAR(45) NULL,
-  `rowfiveseatten` VARCHAR(45) NULL,
-  `rowsixseatone` VARCHAR(45) NULL,
-  `rowsixseattwo` VARCHAR(45) NULL,
-  `rowsixseatthree` VARCHAR(45) NULL,
-  `rowsixseatfour` VARCHAR(45) NULL,
-  `rowsixseatfive` VARCHAR(45) NULL,
-  `rowsixseatsix` VARCHAR(45) NULL,
-  `rowsixseatseven` VARCHAR(45) NULL,
-  `rowsixseateight` VARCHAR(45) NULL,
-  `rowsixseatnine` VARCHAR(45) NULL,
-  `rowsixseatten` VARCHAR(45) NULL,
-  `rowsevenseatone` VARCHAR(45) NULL,
-  `rowsevenseattwo` VARCHAR(45) NULL,
-  `rowsevenseatthree` VARCHAR(45) NULL,
-  `rowsevenseatfour` VARCHAR(45) NULL,
-  `rowsevenseatfive` VARCHAR(45) NULL,
-  `rowsevenseatsix` VARCHAR(45) NULL,
-  `rowsevenseatseven` VARCHAR(45) NULL,
-  `rowsevenseateight` VARCHAR(45) NULL,
-  `rowsevenseatnine` VARCHAR(45) NULL,
-  `rowsevenseatten` VARCHAR(45) NULL,
-  `roweightseatone` VARCHAR(45) NULL,
-  `roweightseattwo` VARCHAR(45) NULL,
-  `roweightseatthree` VARCHAR(45) NULL,
-  `roweightseatfour` VARCHAR(45) NULL,
-  `roweightseatfive` VARCHAR(45) NULL,
-  `roweightseatsix` VARCHAR(45) NULL,
-  `roweightseatseven` VARCHAR(45) NULL,
-  `roweightseateight` VARCHAR(45) NULL,
-  `roweightseatnine` VARCHAR(45) NULL,
-  `roweightseatten` VARCHAR(45) NULL,
-  `rownineseatone` VARCHAR(45) NULL,
-  `rownineseattwo` VARCHAR(45) NULL,
-  `rownineseatthree` VARCHAR(45) NULL,
-  `rownineseatfour` VARCHAR(45) NULL,
-  `rownineseatfive` VARCHAR(45) NULL,
-  `rownineseatsix` VARCHAR(45) NULL,
-  `rownineseatseven` VARCHAR(45) NULL,
-  `rownineseateight` VARCHAR(45) NULL,
-  `rownineseatnine` VARCHAR(45) NULL,
-  `rownineseatten` VARCHAR(45) NULL,
-  `rowtenseatone` VARCHAR(45) NULL,
-  `rowtenseattwo` VARCHAR(45) NULL,
-  `rowtenseatthree` VARCHAR(45) NULL,
-  `rowtenseatfour` VARCHAR(45) NULL,
-  `rowtenseatfive` VARCHAR(45) NULL,
-  `rowtenseatsix` VARCHAR(45) NULL,
-  `rowtenseatseven` VARCHAR(45) NULL,
-  `rowtenseateight` VARCHAR(45) NULL,
-  `rowtenseatnine` VARCHAR(45) NULL,
-  `rowtenseatten` VARCHAR(45) NULL,
-  PRIMARY KEY (`movieoneid`))
+CREATE TABLE `kinoreser`.`seat` (
+`seatid` INT NOT NULL,
+`1` VARCHAR(45) NULL,
+  `2` VARCHAR(45) NULL,
+  `3` VARCHAR(45) NULL,
+  `4` VARCHAR(45) NULL,
+  `5` VARCHAR(45) NULL,
+  `6` VARCHAR(45) NULL,
+  `7` VARCHAR(45) NULL,
+  `8` VARCHAR(45) NULL,
+  `9` VARCHAR(45) NULL,
+  `10` VARCHAR(45) NULL,
+  `11` VARCHAR(45) NULL,
+  `12` VARCHAR(45) NULL,
+  `13` VARCHAR(45) NULL,
+  `14` VARCHAR(45) NULL,
+  `15` VARCHAR(45) NULL,
+  `16` VARCHAR(45) NULL,
+  `17` VARCHAR(45) NULL,
+  `18` VARCHAR(45) NULL,
+  `19` VARCHAR(45) NULL,
+  `20` VARCHAR(45) NULL,
+  `21` VARCHAR(45) NULL,
+  `22` VARCHAR(45) NULL,
+  `23` VARCHAR(45) NULL,
+  `24` VARCHAR(45) NULL,
+  `25` VARCHAR(45) NULL,
+  `26` VARCHAR(45) NULL,
+  `27` VARCHAR(45) NULL,
+  `28` VARCHAR(45) NULL,
+  `29` VARCHAR(45) NULL,
+  `30` VARCHAR(45) NULL,
+  `31` VARCHAR(45) NULL,
+  `32` VARCHAR(45) NULL,
+  `33` VARCHAR(45) NULL,
+  `34` VARCHAR(45) NULL,
+  `35` VARCHAR(45) NULL,
+  `36` VARCHAR(45) NULL,
+  `37` VARCHAR(45) NULL,
+  `38` VARCHAR(45) NULL,
+  `39` VARCHAR(45) NULL,
+  `40` VARCHAR(45) NULL,
+  `41` VARCHAR(45) NULL,
+  `42` VARCHAR(45) NULL,
+  `43` VARCHAR(45) NULL,
+  `44` VARCHAR(45) NULL,
+  `45` VARCHAR(45) NULL,
+  `46` VARCHAR(45) NULL,
+  `47` VARCHAR(45) NULL,
+  `48` VARCHAR(45) NULL,
+  `49` VARCHAR(45) NULL,
+  `50` VARCHAR(45) NULL,
+  `51` VARCHAR(45) NULL,
+  `52` VARCHAR(45) NULL,
+  `53` VARCHAR(45) NULL,
+  `54` VARCHAR(45) NULL,
+  `55` VARCHAR(45) NULL,
+  `56` VARCHAR(45) NULL,
+  `57` VARCHAR(45) NULL,
+  `58` VARCHAR(45) NULL,
+  `59` VARCHAR(45) NULL,
+  `60` VARCHAR(45) NULL,
+  `61` VARCHAR(45) NULL,
+  `62` VARCHAR(45) NULL,
+  `63` VARCHAR(45) NULL,
+  `64` VARCHAR(45) NULL,
+  `65` VARCHAR(45) NULL,
+  `66` VARCHAR(45) NULL,
+  `67` VARCHAR(45) NULL,
+  `68` VARCHAR(45) NULL,
+  `69` VARCHAR(45) NULL,
+  `70` VARCHAR(45) NULL,
+  `71` VARCHAR(45) NULL,
+  `72` VARCHAR(45) NULL,
+  `73` VARCHAR(45) NULL,
+  `74` VARCHAR(45) NULL,
+  `75` VARCHAR(45) NULL,
+  `76` VARCHAR(45) NULL,
+  `77` VARCHAR(45) NULL,
+  `78` VARCHAR(45) NULL,
+  `79` VARCHAR(45) NULL,
+  `80` VARCHAR(45) NULL,
+  PRIMARY KEY (`seatid`))
+ENGINE = InnoDB;
+  
+USE kinoreser;  
+-- -----------------------------------------------------
+-- Table `kinoreser`.`users`
+-- -----------------------------------------------------
+CREATE TABLE `users` (
+  `usersid` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL
+) ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `kinoreser`.`movie`
+-- -----------------------------------------------------
+CREATE TABLE `kinoreser`.`movie` (
+`movieid` INT NOT NULL,
+`moviename` VARCHAR(255) NULL,
+`duration` INT NOT NULL,
+  PRIMARY KEY (`movieid`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`cinemaroomone`
+-- Table `kinoreser`.`cinemaroomone`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`cinemaroomone` (
+CREATE TABLE IF NOT EXISTS `kinoreser`.`cinemaroomone` (
   `cinemaroomoneid` INT NOT NULL,
-  `movieoneid` INT NOT NULL,
+  `movieid` INT NOT NULL,
+  `usersid` INT NOT NULL,
+  `seatid` INT NOT NULL,
   PRIMARY KEY (`cinemaroomoneid`),
-  INDEX `fk_cinemaroomone_movieone_idx` (`movieoneid` ASC),
-  CONSTRAINT `fk_cinemaroomone_movieone`
-    FOREIGN KEY (`movieoneid`)
-    REFERENCES `mydb`.`movieone` (`movieoneid`)
+  INDEX `fk_cinemaroomone_movie_idx` (`movieid` ASC),
+  INDEX `fk_cinemaroomone_users_idx` (`usersid` ASC),
+  INDEX `fk_cinemaroomone_seat_idx` (`seatid` ASC),
+  CONSTRAINT `fk_cinemaroomone_movie`
+    FOREIGN KEY (`movieid`)
+    REFERENCES `kinoreser`.`movie` (`movieid`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+CONSTRAINT `fk_cinemaroomone_users1`
+    FOREIGN KEY (`usersid`)
+    REFERENCES `kinoreser`.`users` (`usersid`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+CONSTRAINT `fk_cinemaroomone_seat1`
+    FOREIGN KEY (`seatid`)
+    REFERENCES `kinoreser`.`seat` (`seatid`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`movietwo`
+-- Table `kinoreser`.`cinemaroomtwo`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`movietwo` (
-  `movietwoid` INT NOT NULL,
-  PRIMARY KEY (`movietwoid`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`cinemaroomtwo`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`cinemaroomtwo` (
+CREATE TABLE IF NOT EXISTS `kinoreser`.`cinemaroomtwo` (
   `cinemaroomtwoid` INT NOT NULL,
-  `movietwoid` INT NOT NULL,
+  `movieid` INT NOT NULL,
+  `usersid` INT NOT NULL,
+  `seatid` INT NOT NULL,
   PRIMARY KEY (`cinemaroomtwoid`),
-  INDEX `fk_cinemaroomtwo_movietwo1_idx` (`movietwoid` ASC),
-  CONSTRAINT `fk_cinemaroomtwo_movietwo1`
-    FOREIGN KEY (`movietwoid`)
-    REFERENCES `mydb`.`movietwo` (`movietwoid`)
+  INDEX `fk_cinemaroomtwo_movie_idx` (`movieid` ASC),
+  INDEX `fk_cinemaroomtwo_users_idx` (`usersid` ASC),
+  INDEX `fk_cinemaroomone_seat_idx` (`seatid` ASC),
+  CONSTRAINT `fk_cinemaroomtwo_movie`
+    FOREIGN KEY (`movieid`)
+    REFERENCES `kinoreser`.`movie` (`movieid`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+CONSTRAINT `fk_cinemaroomtwo_users1`
+    FOREIGN KEY (`usersid`)
+    REFERENCES `kinoreser`.`users` (`usersid`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+CONSTRAINT `fk_cinemaroomtwo_seat1`
+    FOREIGN KEY (`seatid`)
+    REFERENCES `kinoreser`.`seat` (`seatid`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`moviethree`
+-- Table `kinoreser`.`cinemaroomthree`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`moviethree` (
-  `moviethreeid` INT NOT NULL,
-  PRIMARY KEY (`moviethreeid`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `mydb`.`cinemaroomthree`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`cinemaroomthree` (
+CREATE TABLE IF NOT EXISTS `kinoreser`.`cinemaroomthree` (
   `cinemaroomthreeid` INT NOT NULL,
-  `moviethreeid` INT NOT NULL,
+  `movieid` INT NOT NULL,
+  `usersid` INT NOT NULL,
+  `seatid` INT NOT NULL,
   PRIMARY KEY (`cinemaroomthreeid`),
-  INDEX `fk_cinemaroomthree_moviethree1_idx` (`moviethreeid` ASC),
-  CONSTRAINT `fk_cinemaroomthree_moviethree1`
-    FOREIGN KEY (`moviethreeid`)
-    REFERENCES `mydb`.`moviethree` (`moviethreeid`)
+  INDEX `fk_cinemaroomthree_movie1_idx` (`movieid` ASC),
+  INDEX `fk_cinemaroomone_users_idx` (`usersid` ASC),
+  INDEX `fk_cinemaroomone_seat_idx` (`seatid` ASC),
+  CONSTRAINT `fk_cinemaroomthree_movie1`
+    FOREIGN KEY (`movieid`)
+    REFERENCES `kinoreser`.`movie` (`movieid`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+CONSTRAINT `fk_cinemaroomthree_users1`
+    FOREIGN KEY (`usersid`)
+    REFERENCES `kinoreser`.`users` (`usersid`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+CONSTRAINT `fk_cinemaroomthree_seat1`
+    FOREIGN KEY (`seatid`)
+    REFERENCES `kinoreser`.`seat` (`seatid`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
