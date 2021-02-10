@@ -1,0 +1,13 @@
+div{
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+}
+
+div > label{
+
+}
+
+div > input{
+    
+}
