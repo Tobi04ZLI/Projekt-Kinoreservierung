@@ -13,7 +13,7 @@ require_once 'data.php';
 
 <body>
 
-    <button class="login" onclick="location.href='adminloginview.php'">log in as admin</button>
+    <button class="login" onclick="location.href='adminlogin.php'">log in as admin</button>
 
 </body>
 
