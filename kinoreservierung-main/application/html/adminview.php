@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    alkdflkajf
+<button class="login" onclick="location.href='index.php'">back to main page</button>
 </body>
 </html>

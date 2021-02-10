@@ -1,7 +1,8 @@
 <?php
-require_once ("database.php");
+require_once("database.php");
 
-class login{
+class login
+{
 
     public $adminname;
     public $adminpassword;
@@ -14,7 +15,7 @@ class login{
 
     public function login($connection)
     {
-        if(isset($_POST["submit"])){
+        if (isset($_POST["submit"])) {
 
             $adminname = $connection->real_escape_string($this->usrname);
             $adminpassword = $connection->real_escape_string($this->pwd);
@@ -32,11 +33,11 @@ class login{
                 $adminpasswort = $admin['adminpassword'];
                 if ($adminname == $adminnamen && $adminpassword == $adminpasswort) {
                     $loginok = 1;
-                }  
+                }
             }
 
-            if($loginok == 1){
-                
+            if ($loginok == 1) {
+
                 $connection->close();
                 header("Location: adminview.php");
             } else {
@@ -45,5 +46,3 @@ class login{
         }
     }
 }
-
-?>
