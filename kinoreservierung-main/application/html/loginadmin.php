@@ -1,11 +1,10 @@
 <?php
 require_once ("database.php");
-require_once ("adminview.php");
 
-class Login
-{
-    private $adminname;
-    private $adminpassword;
+class login{
+
+    public $adminname;
+    public $adminpassword;
 
     public function __construct($adminname, $adminpassword)
     {
@@ -16,19 +15,32 @@ class Login
     public function login($connection)
     {
         if(isset($_POST["submit"])){
-            $sqltwo = "SELECT adminname FROM admin WHERE admin = '$this->adminname' AND adminpassword = '$this->adminpassword';";
+
+            $adminname = $connection->real_escape_string($this->usrname);
+            $adminpassword = $connection->real_escape_string($this->pwd);
+            $adminname = $_POST['adminname'];
+            $adminpassword = $_POST['adminpassword'];
+
+            $sql = "SELECT adminname, adminpassword FROM admin";
+
             $result = $connection->query($sql);
             $adminFromDatabase = $result->fetch_all(MYSQLI_ASSOC);
+            $loginok = 0;
             foreach ($adminFromDatabase as $admin) {
                 ($admin);
                 $adminnamen = $admin['adminname'];
                 $adminpasswort = $admin['adminpassword'];
-                if ($adminname == $adminnamennamen && $adminpassword == $adminpasswort) {
-                    header("Location: adminview.php");
-                } else {
-                    echo "Wrong Logindata";
-                    header("Location: index.php");
-                }
+                if ($adminname == $adminnamen && $adminpassword == $adminpasswort) {
+                    $loginok = 1;
+                }  
+            }
+
+            if($loginok == 1){
+                
+                $connection->close();
+                header("Location: adminview.php");
+            } else {
+                echo ("big fail");
             }
         }
     }
