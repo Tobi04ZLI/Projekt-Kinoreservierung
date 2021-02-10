@@ -18,7 +18,6 @@ require_once 'data.php';
     <a href="Movie3.php">Movie3</a>
 
     <button class="login" onclick="location.href='registerview.php'">register</button>
-
 </body>
 
 </html>
