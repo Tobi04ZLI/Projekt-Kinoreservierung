@@ -1,3 +1,6 @@
+<?php
+require_once ("moviedata.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +14,7 @@
 <body>
     <button class="login" onclick="location.href='index.php'">back to main page</button>
     
-    <form action="Moive1.php" method="POST">
+    <form action="Movie1.php" method="POST">
         <div>
             <label for="name">Name</label>
             <label for="email">Email</label>
@@ -19,8 +22,8 @@
             <input type="text" name="username">
             <input type="text" name="email">
             <input type="text" name="seat">
+            <button type="submit" name="button">Reserve</button>
         </div>
-        <button type="submit" name="button">Reserve</button>
     </form>
 </body>
 </html>
