@@ -7,17 +7,11 @@ require_once 'data.php';
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/png" sizes="32x32" href="./icons/video-camera.png">
+    <link rel="stylesheet" href="./CSS/register.css">
     <title>Homepage</title>
 </head>
-
-<style>
-    form {
-        margin-top: 340px;
-        /*margin-left: 850px;*/
-        text-align: center;
-    }
-</style>
 
 <body>
 
