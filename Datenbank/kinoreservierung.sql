@@ -106,7 +106,7 @@ CREATE TABLE `kinoreser`.`seat` (
   PRIMARY KEY (`seatid`))
 ENGINE = InnoDB;
   
-USE kinoreser;  
+
 -- -----------------------------------------------------
 -- Table `kinoreser`.`users`
 -- -----------------------------------------------------
