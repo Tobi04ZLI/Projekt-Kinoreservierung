@@ -20,6 +20,7 @@
             <input type="text" name="email">
             <input type="text" name="seat">
         </div>
+        <button type="submit" name="button">Reserve</button>
     </form>
 </body>
 </html>
