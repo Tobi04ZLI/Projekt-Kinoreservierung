@@ -12,9 +12,7 @@ form {
 #all {
     margin-left: auto;
     margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    text-align: center;
+    vertical-align: middle;
     border: 2px solid blue;
     border-width: medium;
     height: 200px;
