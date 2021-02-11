@@ -11,17 +11,17 @@ body {
     background-color: grey;
 }
 
-#register {
+/*#register {
     float: left;
     width: 90px;
     height: 60px;
     margin-left: 30px;
     background-color: grey;
-}
+}*/
 
 #one {
     float: left;
-    margin-left: 26%;
+    margin-left: 32%;
     text-decoration: none;
     margin-top: 10px;
 }

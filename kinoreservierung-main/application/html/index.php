@@ -16,7 +16,7 @@ require_once 'data.php';
 <body>
     <button id="login" class="login" onclick="location.href='adminlogin.php'">log in as admin</button> 
 
-    <button id="register" class="login" onclick="location.href='registerview.php'">register</button>
+    <!-- <button id="register" class="login" onclick="location.href='registerview.php'">register</button> -->
 
     <h1><a id="one" href="Movie1.php">Movie1</a></h1>
 
