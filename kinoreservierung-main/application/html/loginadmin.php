@@ -41,7 +41,7 @@ class login
                 $connection->close();
                 header("Location: adminview.php");
             } else {
-                echo ("big fail");
+                echo ("Das Login ist falsch!");
             }
         }
     }

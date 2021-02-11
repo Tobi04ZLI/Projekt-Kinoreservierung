@@ -11,7 +11,7 @@ require_once 'data.php';
     <link rel="icon" type="image/png" sizes="32x32" href="./icons/video-camera.png">
     <link rel="stylesheet" href="./CSS/register.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Register</title>
 </head>
 
 <body>

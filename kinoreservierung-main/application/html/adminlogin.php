@@ -11,13 +11,13 @@ require_once 'data.php';
     <link rel="icon" type="image/png" sizes="32x32" href="./icons/video-camera.png">
     <link rel="stylesheet" href="./CSS/login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Login</title>
 </head>
 
-<button class="login" onclick="location.href='index.php'">back to main page</button>
+<button id="back" class="login" onclick="location.href='index.php'">back to main page</button>
 
 <body>
-    <form action="registerview.php" method="POST">
+    <form action="adminlogin.php" method="POST">
         <input type="text" name="adminname" placeholder="username"> <br> <br>
         <input type="password" name="adminpassword" placeholder="passwort"> <br> <br>
         <button type="submit" name="submit">login</button>
