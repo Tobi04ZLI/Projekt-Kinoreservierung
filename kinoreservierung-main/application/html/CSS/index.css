@@ -1,3 +1,9 @@
+body {
+    background-image: url("../pictures/cinema.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
 #login {
     float: left;
     width: 90px;
