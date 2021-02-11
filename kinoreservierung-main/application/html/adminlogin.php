@@ -18,9 +18,11 @@ require_once 'data.php';
 
 <body>
     <form action="adminlogin.php" method="POST">
-        <input type="text" name="adminname" placeholder="username"> <br> <br>
-        <input type="password" name="adminpassword" placeholder="passwort"> <br> <br>
-        <button type="submit" name="submit">login</button>
+        <div id="all">
+            <input id="one" type="text" name="adminname" placeholder="username"> <br> <br>
+            <input id="two" type="password" name="adminpassword" placeholder="passwort"> <br> <br>
+            <button id="three" type="submit" name="submit">login</button>
+        </div>
     </form>
 
 </body>
