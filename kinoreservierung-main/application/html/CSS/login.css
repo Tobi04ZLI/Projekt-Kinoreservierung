@@ -1,3 +1,7 @@
+body {
+    background-color: black;
+}
+
 #back {
     background-color: grey;
     width: 90px;
@@ -9,29 +13,46 @@ form {
     text-align: center;
 }
 
+::placeholder {
+    color: black;
+    opacity: 1;
+}
+
 #all {
+    background-image: url("../pictures/lock.webp");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    top: -75px;
+    top: -90px;
     border: 3px solid blue;
-    height: 200px;
-    width: 250px;
+    height: 300px;
+    width: 350px;
     border-radius: 25px;
 }
 
 #one {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 80px;
+    background-color: transparent;
+    font-weight: 900;
+    color: black;
 }
 
 #two {
     text-align: center;
     margin-top: 10px;
+    background-color: transparent;
+    font-weight: 900;
+    color: black;
 }
 
 #three {
-    width: 179px;
+    width: 205px;
     text-align: center;
     margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.692);
+    font-weight: 900;
+    color: black;
 }
