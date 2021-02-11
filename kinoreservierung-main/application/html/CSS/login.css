@@ -8,3 +8,32 @@ form {
     margin-top: 340px;
     text-align: center;
 }
+
+#all {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    border: 2px solid blue;
+    border-width: medium;
+    height: 200px;
+    width: 250px;
+    border-radius: 25px;
+}
+
+#one {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#two {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#three {
+    width: 179px;
+    text-align: center;
+    margin-top: 10px;
+}
