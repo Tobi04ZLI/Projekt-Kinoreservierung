@@ -34,29 +34,32 @@ class reserv{
                         die($connection->error);
                     }
                     
-                    if ($connection->query($sql) === TRUE) {
+                    if ($connection->query($sql) == TRUE) {
                         echo "New record created successfully";
                     } else {
                         echo "Error: " . $sql . "<br>" . $connection->error;
                     }
                     
+                    $sql = "SELECT usersid FROM users WHERE username = '$username' AND email = '$email';";
+                    $result = $connection->query($sql);
+
                     $insert = "INSERT INTO cinemaroomone (usersid, seatid) VALUES ('$sql', '$seat');";
                     $connection->close();
                     header("Location: Movie1.php");
                 }else {
-                    $sql = "SELECT usersid FROM users WHERE $username = 'username' AND $email = 'email';";
+                    $sql = "SELECT usersid FROM users WHERE username = '$username' AND email = '$email';";
                     $result = $connection->query($sql);
-        
+                    var_dump($result);
                     if (!$result) {
                         die($connection->error);
                     }
                     
-                    if ($connection->query($sql) === TRUE) {
+                    if ($connection->query($sql) == TRUE) {
                         echo "New record created successfully";
                     } else {
                         echo "Error: " . $sql . "<br>" . $connection->error;
                     }
-                    $query = "INSERT INTO cinemaroomone (usersid, seatid) VALUES ('$sql', '$seat');";
+                    $query = "INSERT INTO cinemaroomone (usersid, seatid, movieid) VALUES ('$sql', '$seat', '1');";
         
                     $connection->close();
                     header("Location: Movie1.php");
