@@ -19,9 +19,11 @@ require_once 'data.php';
     <button id="back" class="login" onclick="location.href='index.php'">back to main page</button>
 
     <form action="registerview.php" method="POST">
-        <input type="text" name="username" placeholder="username"> <br> <br>
-        <input type="text" name="email" placeholder="email"> <br> <br>
-        <button type="submit" name="button">register</button>
+    <div id="all">
+        <input id="one" type="text" name="username" placeholder="username"> <br> <br>
+        <input id="two" type="text" name="email" placeholder="email"> <br> <br>
+        <button id="three" type="submit" name="button">register</button>
+        </div>
     </form>
 
 </body>
