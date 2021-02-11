@@ -1,18 +1,21 @@
-/*div{
-    display: flex;
-    justify-content: end;
-    flex-wrap: wrap;
+#all {
+    margin-top: 45%;
+    margin-left: 36%;
 }
 
-div > label{
-
+#one {
+    float: left;
 }
 
-div > input{
-    
-}*/
+#two {
+    float: left;
+}
 
-div {
-    text-align: center;
-    margin-top: 840px;
+#three {
+    float: left;
+}
+
+#four {
+    float: left;
+    margin-top: 18px;
 }
