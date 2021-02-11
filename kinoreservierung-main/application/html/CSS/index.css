@@ -1,19 +1,34 @@
 #login {
-    text-align: center;
+    float: left;
+    width: 90px;
+    height: 60px;
+
+}
+
+#register {
+    float: left;
+    width: 90px;
+    height: 60px;
+    margin-left: 30px;
 }
 
 #one {
-    text-align: center;
+    float: left;
+    margin-left: 26%;
+    text-decoration: none;
+    margin-top: 10px;
 }
 
 #two {
     float: left;
+    margin-left: 80px;
+    text-decoration: none;
+    margin-top: 10px;
 }
 
 #three {
     float: left;
-}
-
-#four {
-    float: left;
+    margin-left: 80px;
+    text-decoration: none;
+    margin-top: 10px;
 }
