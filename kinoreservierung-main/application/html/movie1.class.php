@@ -53,7 +53,7 @@ class reserv{
                                 echo "Error: " . $sql . "<br>" . $connection->error;
                             }
                             $connection->close();
-                            //header("Location: Movie1.php");
+                            header("Location: Movie1.php");
                         }
                     }
                 }else {
@@ -80,7 +80,7 @@ class reserv{
                                 echo "Error: " . $sql . "<br>" . $connection->error;
                             }
                             $connection->close();
-                            //header("Location: Movie1.php");
+                            header("Location: Movie1.php");
                         }
                     }
                 }
