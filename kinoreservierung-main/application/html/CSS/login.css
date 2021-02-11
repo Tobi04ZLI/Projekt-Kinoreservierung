@@ -16,6 +16,7 @@ form {
 ::placeholder {
     color: black;
     opacity: 1;
+    font-weight: 700;
 }
 
 #all {
