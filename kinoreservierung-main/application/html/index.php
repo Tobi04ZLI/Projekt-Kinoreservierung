@@ -18,11 +18,11 @@ require_once 'data.php';
 
     <!-- <button id="register" class="login" onclick="location.href='registerview.php'">register</button> -->
 
-    <h1><a id="one" href="Movie1.php">Movie1</a></h1>
+    <h1><a id="one" href="Movie1.php">Battelship</a></h1>
 
-    <h1><a id="two" href="Movie2.php">Movie2</a></h1>
+    <h1><a id="two" href="Movie2.php">Ironman</a></h1>
     
-    <h1><a id="three" href="Movie3.php">Movie3</a></h1>
+    <h1><a id="three" href="Movie3.php">Bad Boys</a></h1>
 </body>
 
 </html>

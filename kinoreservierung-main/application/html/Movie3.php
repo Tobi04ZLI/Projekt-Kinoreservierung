@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./icons/video-camera.png">
     <link rel="stylesheet" href="./CSS/movie.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie3</title>
+    <title>Bad Boys</title>
 </head>
 
 <body>
