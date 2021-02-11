@@ -14,25 +14,15 @@ require_once 'data.php';
 </head>
 
 <body>
-    <div id="login">
-    <button class="login" onclick="location.href='adminlogin.php'">log in as admin</button>
-    </div>
+    <button id="login" class="login" onclick="location.href='adminlogin.php'">log in as admin</button> 
 
-    <div id="one">
-    <h1><a href="Movie1.php">Movie1</a></h1>
-    </div>
+    <button id="register" class="login" onclick="location.href='registerview.php'">register</button>
 
-    <div id="two">
-    <h1><a href="Movie2.php">Movie2</a></h1>
-    </div>
+    <h1><a id="one" href="Movie1.php">Movie1</a></h1>
+
+    <h1><a id="two" href="Movie2.php">Movie2</a></h1>
     
-    <div id="three">
-    <h1><a href="Movie3.php">Movie3</a></h1>
-    </div>
-
-    <div id="four">
-    <button class="login" onclick="location.href='registerview.php'">register</button>
-    </div>
+    <h1><a id="three" href="Movie3.php">Movie3</a></h1>
 </body>
 
 </html>
