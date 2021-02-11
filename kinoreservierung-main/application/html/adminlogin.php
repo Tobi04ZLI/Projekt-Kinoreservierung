@@ -10,6 +10,7 @@ require_once 'data.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/png" sizes="32x32" href="./icons/video-camera.png">
     <link rel="stylesheet" href="./CSS/login.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
 </head>
 
