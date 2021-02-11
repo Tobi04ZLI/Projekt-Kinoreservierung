@@ -30,32 +30,19 @@ class reserv{
                 if($username != $usrname && $email != $mail){
                     $query = "INSERT INTO users (username, email) VALUES ('$username', '$email');";
                     $result = $connection->query($query);
-                    if (!$result) {
-                        die($connection->error);
-                    }
-                    
-                    if ($connection->query($sql) == TRUE) {
-                        echo "New record created successfully";
-                    } else {
-                        echo "Error: " . $sql . "<br>" . $connection->error;
-                    }
-                    
-                    $sql = "SELECT usersid FROM users WHERE username = '$username' AND email = '$email';";
-                    $result = $connection->query($sql);
-
-                    $insert = "INSERT INTO cinemaroomone (usersid, seatid) VALUES ('$sql', '$seat');";
-                    $connection->close();
-                    header("Location: Movie1.php");
-                }else {
-                    $sql = "SELECT * FROM users;";
-                    $result = $connection->query($sql);
-                    $usrsFromDatabase = $result->fetch_all(MYSQLI_ASSOC);
+                    $select = "SELECT * FROM users;";
+                    $selected = $connection->query($select);
+                    $usrsFromDatabase = $seleected->fetch_all(MYSQLI_ASSOC);
                     foreach ($usrsFromDatabase as $usrs) {
                         ($usrs);
                         $usrname = $usrs['username'];
                         $mail = $usrs['email'];
                         $usersid = $usrs['usersid'];
+                        var_dump($usersid);
                         if($username == $usrname && $email == $mail){
+                            
+                            $query = "INSERT INTO cinemaroomone (usersid, seatid, movieid) VALUES ('$usersid', '$seat', '1');";
+                            $result = $connection->query($query);
                             if (!$result) {
                                 die($connection->error);
                             }
@@ -65,10 +52,35 @@ class reserv{
                             } else {
                                 echo "Error: " . $sql . "<br>" . $connection->error;
                             }
-                            $query = "INSERT INTO cinemaroomone (usersid, seatid, movieid) VALUES ('$usersid', '$seat', '1');";
-                
                             $connection->close();
-                            header("Location: Movie1.php");
+                            //header("Location: Movie1.php");
+                        }
+                    }
+                }else {
+                    $sql = "SELECT * FROM users;";
+                    $result = $connection->query($sql);
+                    $usrsFromDatabase = $result->fetch_all(MYSQLI_ASSOC);
+                    foreach ($usrsFromDatabase as $usrs) {
+                        ($usrs);
+                        $usrname = $usrs['username'];
+                        $mail = $usrs['email'];
+                        $users = $usrs['usersid'];
+                        var_dump($users);
+                        if($username == $usrname && $email == $mail){
+                            
+                            $query = "INSERT INTO `cinemaroomone` (`usersid`, `seatid`, `movieid`) VALUES ('$users', '$seat', '1');";
+                            $result = $connection->query($query);
+                            if (!$result) {
+                                die($connection->error);
+                            }
+                            
+                            if ($connection->query($sql) == TRUE) {
+                                echo "connection succesfull";
+                            } else {
+                                echo "Error: " . $sql . "<br>" . $connection->error;
+                            }
+                            $connection->close();
+                            //header("Location: Movie1.php");
                         }
                     }
                 }
