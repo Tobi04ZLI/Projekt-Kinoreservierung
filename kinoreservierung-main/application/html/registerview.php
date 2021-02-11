@@ -16,7 +16,7 @@ require_once 'data.php';
 
 <body>
 
-    <button class="login" onclick="location.href='index.php'">back to main page</button>
+    <button id="back" class="login" onclick="location.href='index.php'">back to main page</button>
 
     <form action="registerview.php" method="POST">
         <input type="text" name="username" placeholder="username"> <br> <br>
