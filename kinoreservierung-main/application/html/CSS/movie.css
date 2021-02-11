@@ -1,5 +1,11 @@
+#back {
+    background-color: grey;
+    width: 90px;
+    height: 60px;
+}
+
 #all {
-    margin-top: 45%;
+    margin-top: 42%;
     margin-left: 36%;
 }
 

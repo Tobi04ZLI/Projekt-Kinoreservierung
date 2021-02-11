@@ -9,6 +9,28 @@
     <title>Document</title>
 </head>
 <body>
-    <button class="login" onclick="location.href='index.php'">back to main page</button>
+    <button id="back" class="login" onclick="location.href='index.php'">back to main page</button>
+
+    <form id="all" action="Movie2.php" method="POST">
+        <div id="one">
+            <label for="name">Name</label> <br>
+            <input type="text" name="username">
+        </div>
+
+        <div id="two">
+            <label for="email">Email</label> <br>
+            <input type="text" name="email">
+        </div>
+
+        <div id="three">
+            <label for="seat">Seat</label> <br>
+            <input type="text" name="seat">
+        </div>
+
+        <div id="four">
+            <button type="submit" name="button">Reserve</button>
+        </div>
+
+    </form>
 </body>
 </html>

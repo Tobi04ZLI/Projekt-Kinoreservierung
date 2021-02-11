@@ -14,7 +14,7 @@ require_once("moviedata.php");
 </head>
 
 <body>
-    <button class="login" onclick="location.href='index.php'">back to main page</button>
+    <button id="back" class="login" onclick="location.href='index.php'">back to main page</button>
 
     <form id="all" action="Movie1.php" method="POST">
         <div id="one">
@@ -23,17 +23,17 @@ require_once("moviedata.php");
         </div>
 
         <div id="two">
-        <label for="email">Email</label> <br>
-        <input type="text" name="email">
+            <label for="email">Email</label> <br>
+            <input type="text" name="email">
         </div>
 
         <div id="three">
-        <label for="seat">Seat</label> <br>
-        <input type="text" name="seat">
+            <label for="seat">Seat</label> <br>
+            <input type="text" name="seat">
         </div>
 
         <div id="four">
-        <button type="submit" name="button">Reserve</button>
+            <button type="submit" name="button">Reserve</button>
         </div>
 
     </form>
