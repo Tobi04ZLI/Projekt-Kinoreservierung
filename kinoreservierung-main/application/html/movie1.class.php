@@ -38,22 +38,33 @@ class reserv{
                         $usrname = $usrs['username'];
                         $mail = $usrs['email'];
                         $usersid = $usrs['usersid'];
-                        var_dump($usersid);
                         if($username == $usrname && $email == $mail){
-                            
-                            $query = "INSERT INTO cinemaroomone (usersid, seatid, movieid) VALUES ('$usersid', '$seat', '1');";
-                            $result = $connection->query($query);
-                            if (!$result) {
-                                die($connection->error);
+                            $seat = "SELECT seatid FROM `cinemaroomone`";
+                            $result = $connection->query($seat);
+                            $seatsFromDatabase = $result->fetch_all(MYSQLI_ASSOC);
+                            foreach ($seatsFromDatabase as $seats) {
+                                ($seats);
+                                $seatsid = $seats['seatid'];
+                                if($seatsid != NULL){
+                                    echo "This seat is already reserved";
+                                    $connection->close();
+                                    header("Location: Movie1.php");
+                                }else{
+                                    $query = "INSERT INTO `cinemaroomone` (`usersid`, `seatid`, `movieid`) VALUES ('$users', '$seat', '1');";
+                                    $result = $connection->query($query);
+                                    if (!$result) {
+                                        die($connection->error);
+                                    }
+                                    
+                                    if ($connection->query($sql) == TRUE) {
+                                        echo "connection succesfull";
+                                    } else {
+                                        echo "Error: " . $sql . "<br>" . $connection->error;
+                                    }
+                                    $connection->close();
+                                    header("Location: Movie1.php");
+                                }
                             }
-                            
-                            if ($connection->query($sql) == TRUE) {
-                                echo "New record created successfully";
-                            } else {
-                                echo "Error: " . $sql . "<br>" . $connection->error;
-                            }
-                            $connection->close();
-                            header("Location: Movie1.php");
                         }
                     }
                 }else {
@@ -65,22 +76,33 @@ class reserv{
                         $usrname = $usrs['username'];
                         $mail = $usrs['email'];
                         $users = $usrs['usersid'];
-                        var_dump($users);
                         if($username == $usrname && $email == $mail){
-                            
-                            $query = "INSERT INTO `cinemaroomone` (`usersid`, `seatid`, `movieid`) VALUES ('$users', '$seat', '1');";
-                            $result = $connection->query($query);
-                            if (!$result) {
-                                die($connection->error);
+                            $seat = "SELECT seatid FROM `cinemaroomone`";
+                            $result = $connection->query($seat);
+                            $seatsFromDatabase = $result->fetch_all(MYSQLI_ASSOC);
+                            foreach ($seatsFromDatabase as $seats) {
+                                ($seats);
+                                $seatsid = $seats['seatid'];
+                                if($seatsid != NULL){
+                                    echo "This seat is already reserved";
+                                    $connection->close();
+                                    header("Location: Movie1.php");
+                                }else{
+                                    $query = "INSERT INTO `cinemaroomone` (`usersid`, `seatid`, `movieid`) VALUES ('$users', '$seat', '1');";
+                                    $result = $connection->query($query);
+                                    if (!$result) {
+                                        die($connection->error);
+                                    }
+                                    
+                                    if ($connection->query($sql) == TRUE) {
+                                        echo "connection succesfull";
+                                    } else {
+                                        echo "Error: " . $sql . "<br>" . $connection->error;
+                                    }
+                                    $connection->close();
+                                    header("Location: Movie1.php");
+                                }
                             }
-                            
-                            if ($connection->query($sql) == TRUE) {
-                                echo "connection succesfull";
-                            } else {
-                                echo "Error: " . $sql . "<br>" . $connection->error;
-                            }
-                            $connection->close();
-                            header("Location: Movie1.php");
                         }
                     }
                 }
