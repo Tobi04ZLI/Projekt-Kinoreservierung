@@ -3,7 +3,6 @@
 //require_once 'registerbesucher.php';
 require_once 'loginadmin.php';
 require_once 'database.php';
-
 require_once 'adminverwaltung.php';
 
 //$registirierung = new register($username, $email);

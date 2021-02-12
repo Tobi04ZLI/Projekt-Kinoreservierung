@@ -1,3 +1,6 @@
+<?php
+require_once ("data.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +19,7 @@
     <form id="all" action="adminview.php" method="POST">
         <input id="one" type="text" name="moviename" placeholder="moviename">
         <input id="two" type="text" name="duration" placeholder="duration">
-        <button id="three" type="submit" name="button">Reserve</button>
+        <button id="three" type="submit" name="button">Add Film</button>
     </form>
 </body>
 
