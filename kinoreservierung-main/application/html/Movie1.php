@@ -17,7 +17,7 @@ echo "<!DOCTYPE html>
 
 <body>
     <button id="back" class="login" onclick="location.href='index.php'">back to main page</button>
-    <div class="flex1">
+    <div id="seats" class="flex1">
         <?php 
         $count = 1;
         while ($count <= 100){

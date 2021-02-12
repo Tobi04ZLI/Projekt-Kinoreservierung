@@ -20,7 +20,7 @@ input {
 
 #all {
     background-color: rgba(4, 80, 202, 0.781);
-    margin-top: 42%;
+    margin-top: 8%;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -70,7 +70,8 @@ input {
     
 }
 
-t{
-    color: white;
+#seats {
     text-align: center;
+    color: white;
+    margin-top: 4%;
 }
