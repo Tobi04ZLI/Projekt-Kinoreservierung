@@ -5,5 +5,6 @@ require_once ("movie1.class.php");
 
 $reserve = new reserv($username, $email, $seat);
 $create = $reserve->reserved($connection);
+//$display = $reserve->display($connection);
 
 ?>
