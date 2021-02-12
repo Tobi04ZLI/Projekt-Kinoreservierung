@@ -140,7 +140,6 @@ class reserv{
                 $res = FALSE;
             }
         }
-        require_once ("Movie1.php");
         header("Location: Movie1.php");
     }
 }
