@@ -19,17 +19,32 @@ echo "<!DOCTYPE html>
     <button id="back" class="login" onclick="location.href='index.php'">back to main page</button>
     <div class="flex1">
         <?php 
-        $count = 1;
-        while ($count <= 100){
-            echo("<img class='seat' src='./pictures/armchair.svg' alt='Cinemachair'>");
-            echo("<t class='con'>$count</t>");
-
-
-            if ($count % 10 == 0){
-                echo "<br>";
-            } 
-            $count++;
+        if($res == FALSE){
+            $count = 1;
+            while ($count <= 100){
+                echo("<img class='seat' src='./pictures/armchair.svg' alt='Cinemachair'>");
+                echo("<t style='color:white;' class='con'>$count</t>");
+    
+    
+                if ($count % 10 == 0){
+                    echo "<br>";
+                } 
+                $count++;
+            }
+        }else{
+            $count = 1;
+            while ($count <= 100){
+                echo("<img class='seat' src='./pictures/armchair.svg' alt='Cinemachair'>");
+                echo("<t style='color:red;' class='con'>$count</t>");
+    
+    
+                if ($count % 10 == 0){
+                    echo "<br>";
+                } 
+                $count++;
+            }
         }
+        
         ?>
     </div>
 
