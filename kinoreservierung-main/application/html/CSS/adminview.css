@@ -1,5 +1,58 @@
+body {
+    background-color: black;
+}
+
 #back {
     background-color: grey;
     width: 90px;
     height: 60px;
+}
+
+::placeholder {
+    color: black;
+    opacity: 1;
+    font-weight: 700;
+}
+
+input {
+    border: 3px solid black;
+    /*test*/
+}
+
+#all {
+    background-color: rgba(4, 80, 202, 0.781);
+    margin-top: 42%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid blue;
+    height: 50px;
+    width: 800px;
+    border-radius: 15px;
+}
+
+#one {
+    float: left;
+    text-align: center;
+    margin-left: 143px;
+    margin-top: 14px;
+    background-color: transparent;
+}
+
+#two {
+    float: left;
+    text-align: center;
+    margin-left: 30px;
+    margin-top: 14px;
+    background-color: transparent;
+}
+
+#three {
+    float: left;
+    width: 80px;
+    text-align: center;
+    margin-left: 30px;
+    margin-top: 14px;
+    border: 3px solid black;
+    background-color: rgba(255, 255, 255, 0.815);
 }

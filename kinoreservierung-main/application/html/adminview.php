@@ -12,6 +12,12 @@
 
 <body>
     <button id="back" class="login" onclick="location.href='index.php'">back to main page</button>
+
+    <form id="all" action="adminview.php" method="POST">
+        <input id="one" type="text" name="moviename" placeholder="moviename">
+        <input id="two" type="text" name="duration" placeholder="duration">
+        <button id="three" type="submit" name="button">Reserve</button>
+    </form>
 </body>
 
 </html>
