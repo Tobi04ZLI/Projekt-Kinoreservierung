@@ -18,33 +18,29 @@ echo "<!DOCTYPE html>
 <body>
     <button id="back" class="login" onclick="location.href='index.php'">back to main page</button>
     <div id="seats" class="flex1">
-        <?php 
-        if($res == FALSE){
-            $count = 1;
-            while ($count <= 100){
-                echo("<img class='seat' src='./pictures/armchair.svg' alt='Cinemachair'>");
-                echo("<t style='color:white;' class='con'>$count</t>");
-    
-    
-                if ($count % 10 == 0){
+        <?php
+            $sql = "SELECT seatid, blocked FROM cinemaroomone";
+            $result = $connection->query($sql);
+            $seatsFromDatabase = $result->fetch_all(MYSQLI_ASSOC);
+
+            foreach ($seatsFromDatabase as $seat) {
+                $blocked = $seat['blocked'];
+                $seatsid = $seat['seatid'];
+
+                if($blocked){
+                    echo("<img class='seat' src='./pictures/armchair.svg' alt='Cinemachair'>");
+                    echo("<t style='color:red;' class='con'>$seatsid</t>");
+                }else{
+                    echo("<img class='seat' src='./pictures/armchair.svg' alt='Cinemachair'>");
+                    echo("<t style='color:white;' class='con'>$seatsid</t>");
+                
+                }
+
+
+                if ($seatsid % 10 == 0){
                     echo "<br>";
                 } 
-                $count++;
             }
-        }else{
-            $count = 1;
-            while ($count <= 100){
-                echo("<img class='seat' src='./pictures/armchair.svg' alt='Cinemachair'>");
-                echo("<t style='color:red;' class='con'>$count</t>");
-    
-    
-                if ($count % 10 == 0){
-                    echo "<br>";
-                } 
-                $count++;
-            }
-        }
-        
         ?>
     </div>
 
