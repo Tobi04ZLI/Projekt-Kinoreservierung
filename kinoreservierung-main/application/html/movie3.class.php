@@ -5,7 +5,7 @@ require_once ("database.php");
 /*
 $num = 1;
 while($num < 101){
-    $sql = "INSERT INTO cinemaroomone (movieid, usersid, seatid, blocked) VALUES ('1', NULL, '$num', '0')";
+    $sql = "INSERT INTO cinemaroomthree (movieid, usersid, seatid, blocked) VALUES ('3', NULL, '$num', '0')";
     $result = $connection->query($sql);
     $num++;
 }
@@ -45,7 +45,7 @@ class reserv{
                     $mail = $usrs['email'];
                     $users = $usrs['usersid'];
                     if($username == $usrname && $email == $mail){
-                        $block = "SELECT blocked, seatid FROM cinemaroomone WHERE movieid = '1'";
+                        $block = "SELECT blocked, seatid FROM cinemaroomthree WHERE movieid = '1'";
                         $result = $connection->query($block);
                         $seatsFromDatabase = $result->fetch_all(MYSQLI_ASSOC);
                         foreach ($seatsFromDatabase as $seats) {
@@ -55,7 +55,7 @@ class reserv{
                             if($seat == $seatsid){
                                 if($blocked == 0){
                                     echo "i still work";
-                                    $query = "UPDATE cinemaroomone SET usersid = '$users', blocked = '1' WHERE seatid = '$seat'";
+                                    $query = "UPDATE cinemaroomthree SET usersid = '$users', blocked = '1' WHERE seatid = '$seat'";
                                     $result = $connection->query($query);
                                     if (!$result) {
                                         die($connection->error);
@@ -89,7 +89,7 @@ class reserv{
                     $mail = $usrs['email'];
                     $users = $usrs['usersid'];
                     if($username == $usrname && $email == $mail){
-                        $block = "SELECT blocked, seatid FROM cinemaroomone WHERE movieid = '1'";
+                        $block = "SELECT blocked, seatid FROM cinemaroomthree WHERE movieid = '1'";
                         $result = $connection->query($block);
                         $seatsFromDatabase = $result->fetch_all(MYSQLI_ASSOC);
                         foreach ($seatsFromDatabase as $seats) {
@@ -99,7 +99,7 @@ class reserv{
                             if($seat == $seatsid){
                                 if($blocked == 0){
                                     echo "i still work";
-                                    $query = "UPDATE cinemaroomone SET usersid = '$users', blocked = '1' WHERE seatid = '$seat'";
+                                    $query = "UPDATE cinemaroomthree SET usersid = '$users', blocked = '1' WHERE seatid = '$seat'";
                                     $result = $connection->query($query);
                                     if (!$result) {
                                         die($connection->error);
@@ -111,17 +111,16 @@ class reserv{
                                         echo "Error: " . $sql . "<br>" . $connection->error;
                                     }
                                     $connection->close();
-                                    header("Location: Movie1.php");
+                                    header("Location: Movie3.php");
                                 }else{
                                     echo "This seat is already reserved";
                                     $connection->close();
-                                    header("Location: Movie1.php");
+                                    header("Location: Movie3.php");
                                 }
                             }
                         }
                     }
                 }
-
             }
         }
     }

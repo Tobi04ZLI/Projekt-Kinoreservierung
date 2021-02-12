@@ -1,5 +1,5 @@
 <?php
-require_once ("moviedata.php");
+require_once ("moviedata1.php");
 
 echo "<!DOCTYPE html>
 <html lang='en'>";

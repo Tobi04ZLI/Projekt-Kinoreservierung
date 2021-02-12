@@ -1,5 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+require_once ("moviedata2.php");
+
+echo "<!DOCTYPE html>
+<html lang='en'>";
+?>
 
 <head>
     <meta charset="UTF-8">
@@ -12,12 +16,39 @@
 
 <body>
     <button id="back" class="login" onclick="location.href='index.php'">back to main page</button>
+    <div id="seats" class="flex1">
+        <?php
+            $sql = "SELECT seatid, blocked FROM cinemaroomtwo";
+            $result = $connection->query($sql);
+            $seatsFromDatabase = $result->fetch_all(MYSQLI_ASSOC);
+
+            foreach ($seatsFromDatabase as $seat) {
+                $blocked = $seat['blocked'];
+                $seatsid = $seat['seatid'];
+
+                if($blocked){
+                    echo("<img class='seat' src='./pictures/armchair.svg' alt='Cinemachair'>");
+                    echo("<t style='color:red;' class='con'>$seatsid</t>");
+                }else{
+                    echo("<img class='seat' src='./pictures/armchair.svg' alt='Cinemachair'>");
+                    echo("<t style='color:white;' class='con'>$seatsid</t>");
+                
+                }
+
+
+                if ($seatsid % 10 == 0){
+                    echo "<br>";
+                } 
+            }
+        ?>
+    </div>
+
 
     <form id="all" action="Movie2.php" method="POST">
-        <input id="one" type="text" name="username" placeholder="username">
-        <input id="two" type="text" name="email" placeholder="email">
-        <input id="three" type="text" name="seat" placeholder="seat">
-        <button id="four" type="submit" name="button">Reserve</button>
+            <input id="one" type="text" name="username" placeholder="username">
+            <input id="two" type="text" name="email" placeholder="email">
+            <input id="three" type="text" name="seat" placeholder="seat">
+            <button id="four" type="submit" name="button">Reserve</button>
     </form>
 </body>
 
