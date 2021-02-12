@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: white;
 }
 
 #back {
@@ -16,7 +16,6 @@ body {
 
 input {
     border: 3px solid black;
-    /*test*/
 }
 
 #all {
