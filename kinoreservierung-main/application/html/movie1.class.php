@@ -126,5 +126,21 @@ class reserv{
         }
     }
 
+    public function display($connection){
+        $sql = "SELECT seatid, blocked FROM cinemaroomone";
+        $result = $connection->query($result);
+        $seatsFromDatabase = $result->fetch_all(MYSQLI_ASSOC);
+        foreach ($seatsFromDatabase as $seats) {
+            ($seats);
+            $blocked = $seats['blocked'];
+            $seatsid = $seats['seatid'];
+            if($blocked == 0){
+                $res = TRUE;
+            }else{
+                $res = FALSE;
+            }
+        }
+        header("Location: Movie1.php");
+    }
 }
 ?> 
